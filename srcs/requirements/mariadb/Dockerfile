@@ -1,6 +1,10 @@
 FROM debian:buster
 
 RUN apt-get update
-RUN apt-get install -y mariadb-server openssl
+RUN apt-get install -y mariadb-server
+
+COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 EXPOSE 3306
+
+CMD [ "mysqld" ]

@@ -1,16 +1,14 @@
 version: '3'
 services:
-    #mariadb:
-    #    image: mariadb
-    #    container_name: mariadb
-    #    #stdin_open: true
-    #    #tty: true
-    #    build: requirements/mariadb/
-    #    ports:
-    #      - "3306:3306"
-    #    volumes:
-    #      - /Volumes/jode-vri/data:/var/lib/mysql
-    #    restart: always
+    mariadb:
+       image: mariadb
+       container_name: mariadb
+       build: requirements/mariadb/
+       ports:
+         - "3306:3306"
+       volumes:
+         - /home/jode-vri/data:/var/lib/mysql
+       restart: always
     nginx:
         image: nginx
         container_name: nginx
