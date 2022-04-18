@@ -62,10 +62,10 @@ volumes:
     driver_opts:
       o: bind
       type: ext4
-      device: /home/admin/data/mariadb
+      device: /home/jode-vri/data/mariadb
   wordpress:
     driver: local
     driver_opts:
       o: bind
       type: ext4
-      device: /home/admin/data/wordpress
+      device: /home/jode-vri/data/wordpress

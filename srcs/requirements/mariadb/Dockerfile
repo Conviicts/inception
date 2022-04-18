@@ -13,7 +13,6 @@ COPY ./db.sql /tmp
 EXPOSE 3306
 
 RUN service mysql start && \
-    echo "vars: " ${MYSQL_DATABASE} ${MYSQL_USER} ${MYSQL_PASSWORD} && \
     sed -i "s/S&R_MYSQL_DATABASE/${MYSQL_DATABASE}/g" /tmp/db.sql && \
     sed -i "s/S&R_MYSQL_USER/${MYSQL_USER}/g" /tmp/db.sql && \
     sed -i "s/S&R_MYSQL_PASSWORD/${MYSQL_PASSWORD}/g" /tmp/db.sql && \
