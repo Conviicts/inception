@@ -13,8 +13,8 @@ rm: stop
 	docker rm nginx
 	docker volume rm srcs_mariadb
 	docker volume rm srcs_wordpress
+	rm -rf /home/jode-vri/data
 
 re: all
 
 .PHONY: all up down start stop
-	
