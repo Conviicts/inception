@@ -5,14 +5,8 @@ up:
 	mkdir -p /home/jode-vri/data/wordpress
 	mkdir -p /home/jode-vri/data/mariadb
 	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d --build
-down:
-	docker-compose -f $(DOCKER_COMPOSE_FILE) down
-start:
-	docker-compose -f $(DOCKER_COMPOSE_FILE) start
 stop:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) stop
-ps:
-	docker-compose -f $(DOCKER_COMPOSE_FILE) ps
 rm: stop
 	docker rm mariadb
 	docker rm wordpress
